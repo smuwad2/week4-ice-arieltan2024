@@ -15,6 +15,14 @@
         }
 
         /* Add CSS code here */ 
+        /* #square {
+            width: 150px;
+            height: 150px;
+            border-radius: 0%;
+            background-color: goldenrod;
+            text-align: center;
+            padding-top: 60px; 
+        } can't work if i try document.getElementById() */
 
     </style>
 </head>
@@ -25,7 +33,13 @@
         </div>
         
         <script>
-           // add code here
+            // add code here
+            function mOver(obj){
+                obj.style.borderRadius = "0%";
+            }
+            function mOut(obj){
+                obj.style.borderRadius = "50%";
+            }
         </script>
                 
 </body>

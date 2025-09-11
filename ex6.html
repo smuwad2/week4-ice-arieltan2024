@@ -19,7 +19,17 @@
     <script>
         
         // add code here
-        
+        const newItem = document.getElementById("select_item");
+        newItem.addEventListener("change", addItem); // no bracket for function, only for anonymous functions
+        function addItem(){
+            const newItemVal = document.getElementById("select_item").value;
+            const ulElem = document.getElementsByTagName("ul")[0]; 
+            // new items dn <ul> cuz alr exist so js reference back to the list above 
+            const liElem = document.createElement("li"); 
+            // new items added dh <li> so need to create 
+            liElem.innerText = newItemVal;
+            ulElem.appendChild(liElem);
+        }
         
     </script>
 
